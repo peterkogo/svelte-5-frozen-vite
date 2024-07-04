@@ -22,6 +22,7 @@
 
   function changeDeepStuff() {
     stuff.forEach((thing, i) => {
+      // When partial is true, only update the first 10 elements
       if (!partial || (partial && i < partialAmount)) {
         thing.position.x = Math.random() * 500;
         thing.position.y = Math.random() * 500;
@@ -31,6 +32,7 @@
 
   function changeFrozenStuff() {
     frozenStuff = frozenStuff.map((thing, i) => {
+      // When partial is true, only update the first 10 elements
       if (!partial || (partial && i < partialAmount)) {
         return {
           ...thing,
